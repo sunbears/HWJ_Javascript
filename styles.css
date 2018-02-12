@@ -1,0 +1,28 @@
+.form-control {
+  display: inline-block;
+  width: 250px;
+  margin-top: 50px;
+}
+
+#inputbox {
+  background-color: lightsteelblue;
+  color: black;
+}
+
+#searchbox {
+  background-color: lightslategray;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 p {
+  text-align: center;
+}
+
+#headerUFO {
+  background-color: darkslateblue;
+  color: white;
+}

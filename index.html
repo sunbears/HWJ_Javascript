@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="styles.css">
+   
+  <!-- Script sources needed to make the table pagination work -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class = "row">
+      <div class="col-md-12" id = "headerUFO"></div>  
+        <h1>UFO Sightings</h1>
+          <p>WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at www.ALIENS-R-REAL.com have 
+            collected all of the eye-witness reports we could to prove it! All we need to do now is put this information 
+            online for the world to see and then the matter will finally be put to rest.</p>
+        </div>
+    </div>
+
+    <div class="row">
+      
+      <div class="col-md-6" id = "inputbox">
+        <h3 class="text-left">ENTER a Sighting</h3>          
+        <form>
+          <!-- Input Fields     -->
+          <div class="form-group">
+            <input type="text" class="form-control" id="datetime" placeholder = "Date Time">
+            <input type="text" class="form-control" id="city" placeholder = "City">
+            <input type="text" class="form-control" id="state" placeholder = "State">
+            <input type="text" class="form-control" id="country" placeholder = "Country">
+            <input type="text" class="form-control" id="shape" placeholder = "Shape">
+            <input type="text" class="form-control" id="durationMinutes" placeholder = "Duration">
+            <input type="text" class="form-control" id="comment" placeholder="Comment">
+          </div>
+          <!-- Submit Button -->
+          <button id="submit" class="btn btn-success right">Submit</button>
+        </form>
+        <br>
+      </div>
+      
+      <!-- Search Button -->
+      <div class="col-md-6" id = "searchbox">
+        <h3 class="text-left">SEARCH Sightings</h3>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="datetimeSearch" placeholder="Date Time">
+            <input type="text" class="form-control" id="citySearch" placeholder="City">
+            <input type="text" class="form-control" id="stateSearch" placeholder = "State">
+            <input type="text" class="form-control" id="countrySearch" placeholder = "Country">
+            <input type="text" class="form-control" id="shapeSearch" placeholder = "Shape">
+          </div>
+          <button id="search" class="btn btn-success right">Search</button>
+          <a id="reset" class="btn btn-default">Reset Search</a>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+    <!-- Data Table   -->
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-striped" id="myTable">
+          <thead>
+            <tr>
+              <th>Datetime</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Country</th>
+              <th>Shape</th>
+              <th>Duration</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="data.js" type="text/javascript"></script>
+  <script src="index.js" type="text/javascript"></script>
+  
+  <!-- Table Pagination -->
+  <script>
+    $(document).ready(function(){
+        $('#myTable').dataTable();
+    });
+    </script>
+
+</body>
+
+</html>
